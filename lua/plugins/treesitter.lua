@@ -10,10 +10,16 @@ return {
       "vim",
       "python",
       "rust",
+      "sql",
+      "html",
+      "css",
       "markdown",
       "yaml",
+      "toml",
+      "json",
+      "helm",
       "dockerfile",
-      -- add more arguments for adding more treesitter parsers
+      "terraform",
     })
   end,
 }
