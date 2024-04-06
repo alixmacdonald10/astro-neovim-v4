@@ -42,49 +42,6 @@ return {
       local fn = require "utils.fn"
       local telescope = require "utils.telescope"
 
-      -- python
-      -- dap.defaults.python.exception_breakpoints = {'raised'}
-      local PYTHON_DIR = ".venv/Scripts/python"
-
-      dap.adapters.python = {
-        name = "python",
-        type = "executable",
-        command = PYTHON_DIR,
-        args = { "-m", "debugpy.adapter" },
-        detatched = false,
-      }
-
-      dap.configurations.python = {
-        {
-          name = "Run current file with args",
-          type = "python",
-          request = "launch",
-          program = "${file}",
-          justMyCode = false,
-          args = function()
-            local arguments = vim.fn.input('Program arguments: ')
-            return vim.split(arguments, " +")
-          end,
-        },
-        {
-          name = "Pytest: Current File with args",
-          type = "py",
-          request = "launch",
-          module = "pytest",
-          stopOnEntry = false,
-          args = function()
-            local base_args = {
-              "${file}",
-            }
-            local user_args_str = vim.fn.input('Enter additional arguments: ')
-            local user_args = vim.split(user_args_str, "%s+", { trimempty = true })
-            vim.list_extend(base_args, user_args)
-            return base_args
-          end,
-          console = "integratedTerminal",
-        }
-      }
-
       -- rust
       local CODELLDB_DIR = require("mason-registry").get_package("codelldb"):get_install_path()
         .. "/extension/adapter/codelldb"
