@@ -13,10 +13,15 @@ return {
   -- language packs
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.proto" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.docker" }, 
   { import = "astrocommunity.pack.terraform" },
+  { import = "astrocommunity.pack.helm" },
+
+  -- debugging 
+  { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
 
   -- Markdown handling
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim"} 
