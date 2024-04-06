@@ -3,11 +3,24 @@
 
 ---@type LazySpec
 return {
-  
 
   -- == Examples of Adding Plugins ==
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+    -- specify when the plug in should be loaded
+    event = "User Astrofile",
+    -- specify what commands could also be ran to load the plugin
+    cmd = { "TodoQuickFix" },
+    -- create mappings for the plugin
+    keys = {
+      { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open TODOs in Telescope"},
+    },
+  },
 
   "andweeb/presence.nvim",
+
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",

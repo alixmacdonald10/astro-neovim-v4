@@ -6,7 +6,7 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  
+
   -- themes
   { import = "astrocommunity.colorscheme.catppuccin" },
 
@@ -16,7 +16,7 @@ return {
   { import = "astrocommunity.pack.proto" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.markdown" },
-  { import = "astrocommunity.pack.docker" }, 
+  { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.helm" },
 
@@ -24,5 +24,5 @@ return {
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
 
   -- Markdown handling
-  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim"} 
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim"},
 }
