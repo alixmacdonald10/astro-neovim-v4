@@ -76,6 +76,14 @@ return {
       }
     end
   },
+  {
+    "linux-cultist/venv-selector.nvim",
+    config = function()
+      require('venv-selector').setup {
+        name = { ".venv", "venv" }
+      }
+    end,
+  },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.docker" },
