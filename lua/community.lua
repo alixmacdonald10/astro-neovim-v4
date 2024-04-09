@@ -95,4 +95,7 @@ return {
 
   -- Markdown handling
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim"},
+
+  -- Because i need all the help i can get
+  { import = "astrocommunity.workflow.bad-practices-nvim"}
 }
