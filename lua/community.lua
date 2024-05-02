@@ -6,10 +6,10 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-
+ 
   -- themes
   { import = "astrocommunity.colorscheme.catppuccin" },
-
+  
   -- language packs
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.python" },
@@ -84,6 +84,11 @@ return {
       }
     end,
   },
+  { import = "astrocommunity.pack.html-css"},
+  { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.sql" },
+  { import = "astrocommunity.pack.proto" },
+  { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.docker" },
@@ -97,5 +102,7 @@ return {
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim"},
 
   -- indentation
-  { import = "astrocommunity.indent.indent-rainbowline"}
+
+  -- other
+  { import = "astrocommunity.media.vim-wakatime" },
 }
