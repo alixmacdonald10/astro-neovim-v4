@@ -101,7 +101,8 @@ return {
   -- Markdown handling
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim"},
 
-  -- indentation
+  -- code-runner
+  { import = "astrocommunity.code-runner.overseer-nvim" },
 
   -- other
   { import = "astrocommunity.media.vim-wakatime" },
