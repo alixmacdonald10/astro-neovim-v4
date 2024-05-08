@@ -94,7 +94,7 @@ return {
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.helm" },
-
+  { import = "astrocommunity.pack.full-dadbod" },
   -- debugging 
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
 
