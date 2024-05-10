@@ -6,10 +6,13 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
- 
-  -- themes
+
+  -- themes and colours
   { import = "astrocommunity.colorscheme.catppuccin" },
-  
+  { import = "astrocommunity.color.transparent-nvim" },
+
+  -- note taking
+  { import = "astrocommunity.note-taking.neorg" },
   -- language packs
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.python" },
