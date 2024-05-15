@@ -84,7 +84,7 @@ return {
 
       dap.configurations.rust = {
         {
-          name = "Launch selected target",
+          name = "Launch selected target with args",
           type = "codelldb",
           request = "launch",
           program = function()
@@ -96,7 +96,11 @@ return {
           end,
           cwd = "${workspaceFolder}",
           stopOnEntry = false,
-          args = {}
+          args = function()
+            local user_args_str = vim.fn.input('Enter additional arguments: ')
+            local user_args = vim.split(user_args_str, "%s+", { trimempty = true })
+            return user_args 
+          end,
         },
       }
     end,
