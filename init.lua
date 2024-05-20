@@ -15,17 +15,24 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
--- set powershell as default shell
-local powershell_options = {
-  shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
-  shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
-  shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
-  shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
-  shellquote = "",
-  shellxquote = "",
-}
+-- set powershell as default shell if on windows else zsh
+local shell_options
+if package.config:sub(1, 1) == '\\' then 
+  -- windows
+  shell_options = {
+    shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
+    shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
+    shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
+    shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
+    shellquote = "",
+    shellxquote = "",
+  } else
+  shell_options = {
+    shell = vim.fn.executable "zsh" == 1 and "zsh" or "zsh",
+  }
+end
 
-for option, value in pairs(powershell_options) do
+for option, value in pairs(shell_options) do
   vim.opt[option] = value
 end
 
