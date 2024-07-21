@@ -12,7 +12,7 @@ return {
   { import = "astrocommunity.color.transparent-nvim" },
 
   -- note taking
-
+  { import = "astrocommunity.note-taking.global-note-nvim" },
   -- language packs
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.python" },
