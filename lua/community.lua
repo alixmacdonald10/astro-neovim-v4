@@ -105,7 +105,6 @@ return {
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim"},
 
   -- code-runner
-  { import = "astrocommunity.code-runner.overseer-nvim" },
 
   -- other
   { import = "astrocommunity.media.vim-wakatime" },
