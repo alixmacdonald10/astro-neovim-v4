@@ -15,6 +15,8 @@ return {
   { import = "astrocommunity.note-taking.global-note-nvim" },
   -- language packs
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.pack.python" },
   {
     "mfussenegger/nvim-dap-python",
