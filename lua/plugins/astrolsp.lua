@@ -48,7 +48,7 @@ return {
         settings = {
           ["rust-analyzer"] = {
             check = { command = "clippy", extraArgs = {} },
-            config = { cargo = { features = "all" } },
+            cargo = { features = "all" },
           },
         },
       },
